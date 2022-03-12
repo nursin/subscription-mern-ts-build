@@ -1,0 +1,10 @@
+.heroBackground__video {
+    position: absolute;
+    left: 0;
+    top: 4rem;
+    z-index: 1;
+    height: 80vh;
+    width: 100%;
+    object-fit: cover;
+    background-position: center;
+}
