@@ -48,7 +48,7 @@ router.post('/signup',
 
         const token = await JWT.sign(
             { email: newUser.email },
-            "-83048f3b840ub0234unjneui-djnv3uirfnkje" as string,
+            process.env.JWT_SECRET as string,
             {
                 expiresIn: 360000,
             }
@@ -97,7 +97,7 @@ router.post("/login", async (req, res) => {
 
     const token = await JWT.sign(
         { email: user.email },
-        "-83048f3b840ub0234unjneui-djnv3uirfnkje" as string,
+        process.env.JWT_SECRET as string,
         {
             expiresIn: 360000,
         }

@@ -9,14 +9,13 @@ const app = express();
 app.use(cors())
 const port = process.env.PORT || 8080;
 
-dotenv.config({ path: '/.env' });
+dotenv.config();
 
 // app.get("/", (req, res) => res.send("hello world"));
 app.use(express.json())
 
 // connect to db
-const connection_url = 'mongodb+srv://admin:PynyxaoF1bhfT45k@cluster0.gw1qf.mongodb.net/tinderdb?retryWrites=true&w=majority';
-mongoose.connect(connection_url as string)
+mongoose.connect(process.env.MONGO_URI as string)
 .then(() => {
     console.log("DB Connected")
 })

@@ -18,7 +18,7 @@ export const checkAuth = async (req: Request, res: Response, next: NextFunction)
     try {
         const user = (await JWT.verify(
             token,
-            '-83048f3b840ub0234unjneui-djnv3uirfnkje'
+            process.env.JWT_SECRET as string
         )) as { email: string };
 
         req.user = user.email;
