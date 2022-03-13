@@ -51,7 +51,8 @@ function ModalComponent({ text, variant, isSignupFlow }: ModalProps) {
         setState({
             data: {
                 id: response.data.user.id,
-                email: response.data.user.email 
+                email: response.data.user.email,
+                customerStripeId: response.data.user.customerStripeId,
             },
             loading: false,
             error: null,
