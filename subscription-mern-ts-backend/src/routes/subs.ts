@@ -36,7 +36,7 @@ router.post("/session", checkAuth, async (req, res) => {
         ],
         success_url: "http://localhost:3000/articles",
         cancel_url: "http://localhost:3000/articles-plan",
-        customer: user.customerStripeId
+        customer: user.stripeCustomerId
     }, {
         apiKey: process.env.STRIPE_SECRET_KEY,
     });

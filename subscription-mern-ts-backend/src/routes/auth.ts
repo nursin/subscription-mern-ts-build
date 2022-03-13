@@ -51,7 +51,7 @@ router.post('/signup',
         const newUser = await User.create({
             email,
             password: hashedPassword,
-            customerStripeId: customer.id,
+            stripeCustomerId: customer.id,
         })
 
         const token = await JWT.sign(
@@ -133,7 +133,7 @@ router.get('/me', checkAuth, async (req, res) => {
             user: {
                 id: user._id,
                 email: user.email,
-                customerStripeId: user.customerStripeId,
+                stripeCustomerId: user.stripeCustomerId,
             },
         },
     });
