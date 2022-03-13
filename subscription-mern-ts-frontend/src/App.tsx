@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Nav from './component/Nav/Nav';
-import Articles from './pages/articles';
+import Articles from './pages/Articles';
 import ArticlesPlan from './pages/ArticlesPlan';
 import LandingPage from './pages/LandingPage';
 import { ProtectedRoute } from './routes/ProtectedRoutes';
