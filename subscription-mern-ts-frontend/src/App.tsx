@@ -1,14 +1,15 @@
-import React from 'react';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Nav from './component/Nav/Nav';
-import Hero from './component/Hero/Hero';
+import LandingPage from './pages/LandingPage';
 
 function App() {
   return (
-    <div>
+    <BrowserRouter>
       <Nav />
-      <Hero />
-    </div>
+      <Routes>
+        <Route path="/" element={<LandingPage />}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

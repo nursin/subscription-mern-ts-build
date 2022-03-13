@@ -39,10 +39,12 @@ function Hero() {
                         <ModalComponent 
                             text="Signup"
                             variant="primary"
+                            isSignupFlow={true}
                         />
                         <ModalComponent 
                             text="Login"
                             variant="danger"
+                            isSignupFlow={false}
                         />
                     </HeaderContainer>
                 </Container>
@@ -50,7 +52,7 @@ function Hero() {
             </HeroComponent>
 
             <video autoPlay muted loop className='heroBackground__video'>
-                <source src="https://vod-progressive.akamaized.net/exp=1647137271~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1044%2F19%2F480223896%2F2146728301.mp4~hmac=5736aa0eb00b1bd4063a1c6cb8bd79060614e3e24c6e808ef45cb8afe8e30a62/vimeo-prod-skyfire-std-us/01/1044/19/480223896/2146728301.mp4?filename=pexels-nathan-baldwin-5908584.mp4" type="video/mp4" />
+                <source src="https://vod-progressive.akamaized.net/exp=1647158504~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1044%2F19%2F480223896%2F2146728301.mp4~hmac=c896e9bfd9709dd397a342c70e4e000018c7b055fd12a2b5f643891919f387c2/vimeo-prod-skyfire-std-us/01/1044/19/480223896/2146728301.mp4?filename=pexels-nathan-baldwin-5908584.mp4" type="video/mp4" />
             </video>
         </>
     )

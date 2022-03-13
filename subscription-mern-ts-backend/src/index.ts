@@ -2,9 +2,11 @@ import express from 'express';
 import authRoutes from './routes/auth';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import cors from 'cors';
 
 // dv
 const app = express();
+app.use(cors())
 const port = process.env.PORT || 8080;
 
 dotenv.config({ path: '/.env' });
