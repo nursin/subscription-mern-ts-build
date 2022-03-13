@@ -7,7 +7,7 @@ import dotenv from 'dotenv';
 const app = express();
 const port = process.env.PORT || 8080;
 
-dotenv.config();
+dotenv.config({ path: '/.env' });
 
 // app.get("/", (req, res) => res.send("hello world"));
 app.use(express.json())
