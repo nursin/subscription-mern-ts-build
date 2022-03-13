@@ -1,5 +1,6 @@
 import express from 'express';
 import authRoutes from './routes/auth';
+import subsRoutes from './routes/subs';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import cors from 'cors';
@@ -26,6 +27,7 @@ mongoose.connect(process.env.MONGO_URI as string)
 
 // routes
 app.use("/auth", authRoutes);
+app.use("/subs", subsRoutes);
 
 
 // listen
